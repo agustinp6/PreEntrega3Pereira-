@@ -1,0 +1,397 @@
+@import 'variables';
+@import 'mixins';
+
+h1,
+h2 {
+    color: $white;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+body {
+    background-color: rgb(154, 101, 204);
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pagina {
+    text-decoration: none;
+    color: $white;
+}
+
+.header__nav {
+    width: 90%;
+    height: 70px;
+    margin: 0 auto;
+    background-color: $black;
+    display: flex;
+    justify-content: space-between;
+
+    .header__logo {
+        display: flex;
+
+        img {
+            width: 60px;
+            padding: 5px;
+        }
+    }
+
+    .header__menu {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        padding: 10px;
+
+        .header__item {
+            padding: 10px;
+
+            .header__link {
+                color: $white;
+                text-decoration: none;
+                padding: 10px;
+
+                &:hover {
+                    color: rgb(255, 255, 255);
+                    border-radius: 20px;
+                    background-color: rgb(185, 185, 185);
+                }
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+div {
+    margin: 5px;
+}
+
+.fotos {
+    opacity: 0.9;
+    border: double $white 5px;
+    height: 300px;
+    width: 250px;
+}
+
+div .fotos:hover {
+    border-radius: 40px;
+    opacity: 1;
+}
+
+
+.presentacion {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    height: 70px;
+    margin: 0 auto;
+    background-color: $black;
+    color: $white;
+    font-size: 20px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-sobremi {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1.5fr;
+    grid-template-rows: 0.7fr 1.3fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "sobremi sobremi sobremi"
+        "fotosobremi fotosobremi textosobremi"
+        "fotosobremi fotosobremi textosobremi";
+}
+
+.sobremi {
+    grid-area: sobremi;
+    text-align: center;
+
+    .fotosobremi {
+        grid-area: fotosobremi;
+        margin-left: 30%;
+
+        .fotitosobremi {
+            width: 50%;
+            height: auto;
+        }
+    }
+}
+
+.textosobremi {
+    grid-area: textosobremi;
+
+    .txtsobremi {
+        width: 100%;
+        height: 80vh;
+        text-align: center;
+        color: $white;
+        font-size: 1.25em;
+    }
+}
+
+.container-catalogo {
+    display: grid;
+    grid-template-columns: 1fr 2.6fr 0.1fr;
+    grid-template-rows: 0.3fr 0.9fr 0.9fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "catalogo catalogo catalogo"
+        "flores flores flores"
+        "lamparas lamparas lamparas"
+        "coronas coronas coronas"
+        "borlas borlas borlas";
+}
+
+.catalogo {
+    grid-area: catalogo;
+    text-align: center;
+    background-color: rgb(185, 185, 185);
+    border-radius: 20px;
+}
+
+.flores {
+    display: block;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "florestexto florestexto florestexto"
+        "floresfotos floresfotos floresfotos"
+        "floresfotos floresfotos floresfotos";
+    grid-area: flores;
+}
+
+.florestexto {
+    grid-area: florestexto;
+    text-align: center;
+}
+
+.floresfotos {
+    grid-area: floresfotos;
+    display: flex;
+    flex-direction: column;
+}
+
+.lamparas {
+    display: block;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "lamparastexto lamparastexto lamparastexto"
+        "lamparasfotos lamparasfotos lamparasfotos"
+        "lamparasfotos lamparasfotos lamparasfotos";
+    grid-area: lamparas;
+}
+
+.lamparastexto {
+    grid-area: lamparastexto;
+}
+
+.lamparasfotos {
+    grid-area: lamparasfotos;
+    display: flex;
+    flex-direction: column;
+}
+
+.coronas {
+    display: block;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "coronastexto coronastexto coronastexto"
+        "coronasfotos coronasfotos coronasfotos"
+        "coronasfotos coronasfotos coronasfotos";
+    grid-area: coronas;
+}
+
+.coronasstexto {
+    grid-area: coronastexto;
+}
+
+.coronasfotos {
+    grid-area: coronasfotos;
+    display: flex;
+    flex-direction: column;
+}
+
+.borlas {
+    display: block;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "borlastexto borlastexto borlastexto"
+        "borlasfotos borlasfotos borlasfotos"
+        "borlasfotos borlasfotos borlasfotos";
+    grid-area: borlas;
+    margin-bottom: 100px;
+}
+
+.borlastexto {
+    grid-area: borlastexto;
+}
+
+.borlasfotos {
+    grid-area: borlasfotos;
+    display: flex;
+    flex-direction: column;
+}
+
+.txt-catalogo {
+    text-align: start;
+    font-size: 3em;
+}
+
+.cattxt {
+    color: rgb(0, 0, 0);
+}
+
+.banner-pag3 {
+    width: 40%;
+    height: 100vh;
+}
+
+.formtxt {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.formulario {
+    background-color: rgb(185, 185, 185);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+/*RESPONSIVE*/
+@media only screen and (min-width: 400px) and (max-width: 1023px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .fotos {
+        display: flex;
+        flex-direction: column;
+        opacity: 0.9;
+        border: double $white 5px;
+        height: 50vh;
+        width: 70vw;
+    }
+
+    div .fotos:hover {
+        border-radius: 40px;
+        opacity: 1;
+    }
+
+    h3 {
+        background-color: rgb(185, 185, 185);
+        margin: 5%;
+        padding: 2%;
+    }
+
+    .presentacion {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__nav {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .header__logo {
+        width: 50px;
+    }
+
+    img {
+        width: 60px;
+        padding: 5px;
+    }
+
+    .header__menu {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header__item {
+        padding: 0;
+        text-align: center;
+        justify-content: justify;
+        font-size: 0.85em;
+    }
+
+    .header__link {
+        color: $white;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    .header__link:hover {
+        color: rgb(0, 0, 0);
+        border-radius: 20px;
+        background-color: rgb(185, 185, 185);
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+
+    .banner-pag3 {
+        width: 90vw;
+        height: 85vh;
+        margin-right: 100px;
+        margin-left: 15px;
+    }
+}
